@@ -16,12 +16,12 @@
 // массивах и булевых значениях
 
 
-// Robot type
+// Robot 
 interface Robot  {
   model: string; 
 };
 
-// Custom Astronaut type
+// Custom Astronaut
 interface Astronaut  {
   isInSpace: boolean;
   experienceYears: number;
