@@ -17,12 +17,12 @@
 
 
 // Robot type
-type Robot = {
+interface Robot  {
   model: string; 
 };
 
 // Custom Astronaut type
-type Astronaut = {
+interface Astronaut  {
   isInSpace: boolean;
   experienceYears: number;
   assistantRobot: Robot;
@@ -67,10 +67,17 @@ function print_Astronaut_Info(astronaut: Astronaut, index: string): void {
 require('child_process').execSync(process.platform === 'win32' ? 'cls' : 'clear', { stdio: 'inherit' }); // Clear console
 console.log("🚀 Homework 01: Astronauts and Robots\n------------------------------------------");
 
+const astronauts: Astronaut[] = [Astronaut_1, Astronaut_2];
+
 // Print Astronauts info
+/*
 for (let i = 1; i < 3; i++) {
  print_Astronaut_Info(eval("Astronaut_" + i), i.toString());
 console.log("------------------------------------------");
-
 }
+*/
+astronauts.forEach((astronaut, index) => {
+  print_Astronaut_Info(astronaut, (index + 1).toString());
+  console.log("------------------------------------------");
+});
 
